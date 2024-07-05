@@ -1,0 +1,26 @@
+
+body{
+    background-color:green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+
+}
+h1{
+    font-size: x-large;
+    background-color: crimson;
+    color: white;
+}
+
+button{
+    background-color: greenyellow;
+    padding: 40px;
+    transition: 2s;
+}
+button:hover{
+    color: white;
+    background-color: crimson;
+}
