@@ -1,0 +1,19 @@
+
+.aa,.bb{
+    height: 400px;
+}
+
+.aa,.cc{
+    border: 2px solid black;
+}
+.bb{
+    color: white;
+}
+
+.cc{
+    height: 49dvh;
+}
+
+.form1 input{
+    width: 100%;
+}

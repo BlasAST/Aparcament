@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Aparcament</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="static/js/sesion.js"></script>
+    {% block styles %}{% endblock %}
 </head>
-<body class="bg-body-secondary">
+<body class="bg-body-secondary vh-100">
 <header class="bg-primary d-flex justify-content-between align-items-center px-2">
     <nav class="navbar navbar-expand-lg">
         <div class="<div class="container-fluid">
@@ -18,19 +19,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="{{url_for('home')}}" class="nav-link active" aria-current="page">Home</a>
+                    <a href="{{url_for('home')}}" class="nav-link  {% block valor1 %} {%  endblock %}" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('posicionamiento')}}" class="nav-link">Posicionamiento</a>
+                    <a href="{{url_for('posicionamiento')}}" class="nav-link {% block valor2 %} {%  endblock %}">Posicionamiento</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('horarios')}}" class="nav-link">Horarios</a>
+                    <a href="{{url_for('horarios')}}" class="nav-link {% block valor3 %} {%  endblock %}">Horarios</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('personas')}}" class="nav-link">Personas</a>
+                    <a href="{{url_for('personas')}}" class="nav-link {% block valor4 %} {%  endblock %}">Personas</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('camaras')}}" class="nav-link">Cámaras</a>
+                    <a href="{{url_for('camaras')}}" class="nav-link {% block valor5 %} {%  endblock %}">Cámaras</a>
                 </li>
                 <li class="nav-item cierre">
                     <a class="nav-link close" href="#">Cerrar sesión</a>
@@ -41,7 +42,7 @@
     <h2 class="align-self-start mt-2">Aparcament</h2>
     <h6 class="name align-self-start mt-2">Sesión iniciada como: <span></span></h6>
 </header>
-<main>
+<main >
     {% block content %} {% endblock %}
 </main>
 

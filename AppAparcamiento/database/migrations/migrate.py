@@ -29,21 +29,7 @@ class Coche:
 
 
 def interfaz():
-    print("Hola buenas tardes")
-    my.execute("SHOW TABLES LIKE 'EMPLEADOS'")
-    if not my.fetchone():
-        my.execute('''
-        CREATE TABLE EMPLEADOS(
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            nombre VARCHAR(255) NOT NULL,
-            apellidos VARCHAR(255) NOT NULL,
-            numeroTelefono VARCHAR(255) NOT NULL,
-            correo VARCHAR(255) NOT NULL
 
-        )''')
-        print("Se ha creado la tabla de empleados")
-    else:
-        print("Ya existe la tabla empleados")
     my.execute("SHOW TABLES LIKE 'CLIENTES'")
     if not my.fetchone():
         my.execute('''

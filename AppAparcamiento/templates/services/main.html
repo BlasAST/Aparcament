@@ -1,7 +1,90 @@
 {% extends 'partials/sesion.html' %}
-
+{% block styles%}
+<link rel="stylesheet" href="static/css/estilosHome.css">
+{% endblock %}
+{% block valor1 %} active {% endblock %}
 {% block content %}
 
-<h1>Que tal mi hente</h1>
+<div class="contenedor container-fluid bg-body-secondary mt-2">
+    <div class="row">
+        <div class="col-6 container">
+            <div class="row justify-content-center">
+                <div class="aa col-11  d-flex align-items-center flex-column">
+                    <h2>Entrada</h2>
+                    <form class="form1 d-flex flex-column align-items-center">
+                        <div class="d-flex justify-content-center gap-2">
+                            <div class="w-50">
+                                <div><label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre"></div>
+                                <div><label for="apellidos">Apellidos</label><input type="text" name="apellidos" id="apellidos"></div>
+                                <div><label for="dni">Dni</label><input type="text" name="dni" id="dni"></div>
+                                <div><label for="correo">Correo</label><input type="text" name="correo" id="correo"></div>
+                                
+                            </div>
+                            <div class="w-50">
+                                <div><label for="numTelefono">Contacto</label><input type="text" name="contacto" id="contacto"></div>
+                                <div><label for="matricula">Matricula</label><input type="text" name="matricula" id="matricula"></div>
+                                <div><label for="marca">Marca</label><input type="text" name="marca" id="marca"></div>
+                                <div><label for="modelo">Modelo</label><input type="text" name="modelo" id="modelo"></div>
+                            </div>
+                        </div>
+                        <button type="submit" class="mt-5 btn btn-primary px-4">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class=" col-6 container">
+            <div class="row justify-content-center">
+                <div class=" bb col-11 bg-black d-flex flex-column align-items-center">
+                    <h2>Salida</h2>
+                    <h2>Listado de coches que salen</h2>
+                    <h2>Al seleccionar autocompletar la hora de salida</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="container-fluid my-2">
+            <div class="row justify-content-center">
+                <div class="cc col-11 container">
+                    <div class="row h-100">
+                        <div class=" ccsT col-4 d-flex flex-column align-items-center">
+                            <h2>Tiempos</h2>
+                            <div class="content h-100 w-100 bg-black">
+
+                            </div>
+                        </div>
+                        <div class="col-8 container">
+                            <div class="row h-25">
+                                <div class=" ccs col-6 d-flex flex-column align-items-center">
+                                    <h2>Plazas</h2>
+                                    <div class="content">
+                                        <h2><span>24</span>/<span>47</span></h2>
+                                    </div>
+                                </div>
+
+                                <div class=" ccs col-6 d-flex flex-column align-items-center">
+                                    <h2>Matriculas</h2>
+                                    <div class="content">
+                                        <input type="text" placeholder="Buscar matricula" class="rounded-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row h-75">
+                                <div class=" ccsP  d-flex flex-column align-items-center">
+                                    <h2>Posicionamiento</h2>
+                                    <div class="content h-100 w-100 bg-danger container" style="overflow-y: hidden;">
+                                        {% include 'components/mapa.html' with context %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 {% endblock %}
