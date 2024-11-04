@@ -23,7 +23,7 @@ def middelwareExit():
     if session.get('user'):
         return True
     
-# Rutas de Index
+# Rutas de Index aaa
 @app.route('/')
 def index():
     if middelwareExit():
